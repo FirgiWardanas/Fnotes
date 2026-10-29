@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'core/app_colors.dart';
+import 'screens/login_screen.dart';
 import 'screens/splash_screen.dart';
 
 void main() {
@@ -23,7 +24,11 @@ class FNotesApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: const SplashScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const SplashScreen(),
+        '/login': (context) => const LoginScreen(),
+      },
     );
   }
 }
