@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 import 'core/app_colors.dart';
-import 'screens/auth_screen.dart';
-import 'screens/home_screen.dart';
-import 'screens/note_detail_screen.dart';
-import 'screens/note_form_screen.dart';
 import 'screens/splash_screen.dart';
 
 void main() {
@@ -27,14 +23,7 @@ class FNotesApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      initialRoute: '/',
-      routes: {
-        '/': (context) => const SplashScreen(),
-        '/login': (context) => const AuthScreen(),
-        '/home': (context) => const HomeScreen(),
-        '/new-note': (context) => const NoteFormScreen(),
-        '/detail-note': (context) => const NoteDetailScreen(),
-      },
+      home: const SplashScreen(),
     );
   }
 }

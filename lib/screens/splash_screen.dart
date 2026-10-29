@@ -2,24 +2,8 @@ import 'package:flutter/material.dart';
 import '../core/app_colors.dart';
 import '../widgets/feature_chip.dart';
 
-class SplashScreen extends StatefulWidget {
+class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
-
-  @override
-  State<SplashScreen> createState() => _SplashScreenState();
-}
-
-class _SplashScreenState extends State<SplashScreen> {
-  @override
-  void initState() {
-    super.initState();
-    // ponytail: static delay navigation. Upgrade path: check auth token/session when backend added.
-    Future.delayed(const Duration(milliseconds: 2200), () {
-      if (mounted) {
-        Navigator.pushReplacementNamed(context, '/login');
-      }
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -206,4 +190,6 @@ class _SplashScreenState extends State<SplashScreen> {
       ),
     );
   }
+
+  // ponytail: static splash screen only. Upgrade path: add Timer / navigation trigger when next screen is ready.
 }

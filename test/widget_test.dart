@@ -7,9 +7,7 @@ void main() {
 
     expect(find.text('FNotes'), findsOneWidget);
     expect(find.text('Cepat & Ringan'), findsOneWidget);
-
-    // Fast-forward pending timer to transition to /login
-    await tester.pumpAndSettle(const Duration(seconds: 3));
-    expect(find.text('Selamat Datang'), findsOneWidget);
+    expect(find.text('Tersimpan Aman'), findsOneWidget);
+    expect(find.text('Terorganisir Rapi'), findsOneWidget);
   });
 }
